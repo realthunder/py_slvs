@@ -823,19 +823,19 @@ class System(_object):
     def addSymmetricLine(self, p1, p2, line, wrkpln, group=0, h=0):
         return _slvs.System_addSymmetricLine(self, p1, p2, line, wrkpln, group, h)
 
-    def addMidPoint(self, pt, line, wrkpln=0, group=0, h=0):
+    def addMidPoint(self, pt, line, wrkpln, group=0, h=0):
         return _slvs.System_addMidPoint(self, pt, line, wrkpln, group, h)
 
-    def addPointsHorizontal(self, p1, p2, wrkpln=0, group=0, h=0):
+    def addPointsHorizontal(self, p1, p2, wrkpln, group=0, h=0):
         return _slvs.System_addPointsHorizontal(self, p1, p2, wrkpln, group, h)
 
-    def addPointsVertical(self, p1, p2, wrkpln=0, group=0, h=0):
+    def addPointsVertical(self, p1, p2, wrkpln, group=0, h=0):
         return _slvs.System_addPointsVertical(self, p1, p2, wrkpln, group, h)
 
-    def addLineHorizontal(self, line, wrkpln=0, group=0, h=0):
+    def addLineHorizontal(self, line, wrkpln, group=0, h=0):
         return _slvs.System_addLineHorizontal(self, line, wrkpln, group, h)
 
-    def addLineVertical(self, line, wrkpln=0, group=0, h=0):
+    def addLineVertical(self, line, wrkpln, group=0, h=0):
         return _slvs.System_addLineVertical(self, line, wrkpln, group, h)
 
     def addDiameter(self, d, c, group=0, h=0):
