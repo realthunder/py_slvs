@@ -111,6 +111,10 @@ class param(_object):
     __swig_getmethods__["val"] = _slvs.param_val_get
     if _newclass:
         val = _swig_property(_slvs.param_val_get, _slvs.param_val_set)
+    __swig_setmethods__["free"] = _slvs.param_free_set
+    __swig_getmethods__["free"] = _slvs.param_free_get
+    if _newclass:
+        free = _swig_property(_slvs.param_free_get, _slvs.param_free_set)
 
     def __init__(self):
         this = _slvs.new_param()
@@ -682,8 +686,8 @@ class System(_object):
     def reset(self):
         return _slvs.System_reset(self)
 
-    def solve(self, group=0, reportFailed=False):
-        return _slvs.System_solve(self, group, reportFailed)
+    def solve(self, group=0, reportFailed=False, findFreeParams=False):
+        return _slvs.System_solve(self, group, reportFailed, findFreeParams)
 
     def getParam(self, h):
         return _slvs.System_getParam(self, h)
@@ -711,6 +715,18 @@ class System(_object):
 
     def addEntity(self, v, overwrite=False):
         return _slvs.System_addEntity(self, v, overwrite)
+
+    def getEntityParam(self, h, idx):
+        return _slvs.System_getEntityParam(self, h, idx)
+
+    def setEntityParam(self, h, idx, hParam):
+        return _slvs.System_setEntityParam(self, h, idx, hParam)
+
+    def getEntityPoint(self, h, idx):
+        return _slvs.System_getEntityPoint(self, h, idx)
+
+    def setEntityPoint(self, h, idx, hEntity):
+        return _slvs.System_setEntityPoint(self, h, idx, hEntity)
 
     def addParamV(self, val, group=0, h=0):
         return _slvs.System_addParamV(self, val, group, h)
